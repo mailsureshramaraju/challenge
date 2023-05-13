@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: truck-service
+  profiles:
+    active: "development"
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/truck
+    username: root
+    password: rootpass
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+logging:
+  pattern:
+    console: "%clr(TS=){faint}%clr(%d{yyyy-MM-dd'T'HH:mm:ss.SSS'Z', UTC}){faint} %clr(APP=){faint}%clr(${spring.application.name:null}){yellow} %clr(ENV=){faint}%clr(${spring.profiles.active:null}){magenta} %clr(LEVEL=){faint}%clr(${LOG_LEVEL_PATTERN:%p}) %clr(CLASS=){faint}%clr(%logger{26}){cyan} %clr(TRACEID=){faint}%clr(%X{correlationId:-null}){reverse} | %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+---
